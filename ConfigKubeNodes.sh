@@ -26,5 +26,3 @@ echo "net.bridge.bridge-nf-call-iptables=1" | sudo tee -a /etc/sysctl.conf
 sudo modprobe br_netfilter
 sudo sysctl -p
 sudo kubeadm join $controller_private_ip:6443 --token $token --discovery-token-ca-cert-hash $hash
-kubectl get nodes
-
